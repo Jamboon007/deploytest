@@ -1,14 +1,13 @@
 {
-  "builds": [
-    {
+  "builds": [{
       "src": "webtest/wsgi.py",
-      "use": "@vercel/python"
-    }
-  ],
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+  }],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "webtest/wsgi.py"
-    }
+      {
+          "src": "/(.*)",
+          "dest": "webtest/wsgi.py"
+      }
   ]
 }
