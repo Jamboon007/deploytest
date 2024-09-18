@@ -1,8 +1,14 @@
 {
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "webtest/wsgi.py"
-      }
-    ]
-  }
+  "builds": [
+    {
+      "src": "webtest/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "webtest/wsgi.py"
+    }
+  ]
+}
